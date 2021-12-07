@@ -1,6 +1,7 @@
 <script lang="ts">
 	import PersonCard from './PersonCard.svelte';
 	import { Person } from '../../model/Person';
+	import LoadingSpinner from "../LoadingSpinner.svelte";
 
 	let personResult: Person[] = [];
 
@@ -18,7 +19,7 @@
 </script>
 
 {#await getPeople()}
-	<p>Fetching people now ...</p>
+	<LoadingSpinner/>
 {:then value}
 	<h1 class='text-4xl text-center py-5'>Customers</h1>
 	<div class='grid grid-cols-5 gap-7'>

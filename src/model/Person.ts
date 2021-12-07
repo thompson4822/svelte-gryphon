@@ -5,15 +5,15 @@ import { defaultCredentials } from './Credentials';
 
 export interface Person {
 	id: number,
-	firstName: string,
-	lastName: string,
-	phone: string,
+	firstName?: string,
+	lastName?: string,
+	phone?: string,
 	address: Address,
 	creditAmount: number,
 	gender: string,
 	avatar: number[],
 	credentials: Credentials,
-	email: string
+	email?: string
 }
 
 export const defaultPerson = () => ({

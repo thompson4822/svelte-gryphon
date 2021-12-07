@@ -9,7 +9,7 @@
 	<p>{person.email}</p>
 </div>
 -->
-<div class="person card text-center shadow-2xl">
+<div class="person card text-center shadow-2xl hover:bg-gray-800">
 	<figure class="px-10 pt-10">
 		<img src="data:image/png;base64,{person.avatar}" class="rounded-full">
 	</figure>

@@ -1,5 +1,6 @@
 <script>
-	import StoreDetails from './StoreDetails.svelte';
+	import StoreCard from "./StoreCard.svelte";
+	import LoadingSpinner from "../LoadingSpinner.svelte";
 
 	let stores = []
 
@@ -14,11 +15,11 @@
 </script>
 
 {#await getStores()}
-	<p>Fetching people now ...</p>
+	<LoadingSpinner/>
 {:then value}
 	<div class='grid grid-cols-5 gap-7'>
 		{#each stores as store}
-			<StoreDetails {store}/>
+			<StoreCard {store}/>
 		{/each}
 	</div>
 {/await}
